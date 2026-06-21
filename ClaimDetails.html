@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./CSS/style.css">
+    </link>
+</head>
+
+<body>
+
+    <div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search Customer Name">
+            <button onclick="SearchCustomer()">Search</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Policy Number</th>
+                    <th>Customer Name</th>
+                    <th>Claim Type</th>
+                    <th>Submitted Date</th>
+                    <th>Claim Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="ClaimDetails"></tbody>
+        </table>
+        <div id="pagination"></div>
+    </div>
+    <script src="./Scripts/claims.js" defer></script>
+</body>
+
+</html>
