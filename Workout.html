@@ -1,14 +1,147 @@
 <style>
     .box {
-        display: block;
-        width: Auto;
-        height: 100px;
+        display: inline-block;
         background: coral;
-
         padding: 20px;
-        margin-top: 30px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+
+    }
+
+    .input-types input {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* WITHOUT box-sizing */
+    .box1 {
+        width: 200px;
+        padding: 20px;
+        border: 5px solid black;
+        background: coral;
+        /* actual width = 250px */
+    }
+
+    /* WITH box-sizing */
+    .box2 {
+        box-sizing: border-box;
+        width: 200px;
+        padding: 20px;
+        border: 5px solid black;
+        background: lightblue;
+        /* actual width = 200px */
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        /* horizontal alignment */
+        align-items: center;
+        /* vertical alignment */
+        gap: 10px;
+        /* spacing between items */
+    }
+
+    .container1 {
+        display: grid;
+
+        grid-template-columns: repeat(3, 2fr);
+
+    }
+
+    .box5 {
+        position: absolute;
+        left: 100px;
+        /* ignored */
+    }
+
+    .badge {
+        background: red;
+        color: white;
+    }
+
+    .bell {
+        position: relative;
+        display: inline-block;
+        margin-top: 10px;
+        background-color: black;
+    }
+
+    .badge {
+        position: absolute;
+        top: -10px;
+        right: -7px;
+
+        background: red;
+        color: white;
+        border-radius: 50%;
+        padding: 3px 6px;
+        font-size: 12px;
     }
 </style>
 <div class="box">Box 1</div>
 <div class="box">Box 2</div>
 <div class="box">Box 3</div>
+<div class="input-types">
+    <input type="text" />
+    <input type="password" />
+</div>
+
+<div class="box1">Without border-box = 250px</div>
+<div class="box2">With border-box = 200px</div>
+
+<div class="container">
+    <div>Box 1</div>
+    <div>Box 2</div>
+    <div>Box 3</div>
+</div>
+
+<div class="container1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</div>
+
+
+<div class="box4">Box 4</div>
+<div class="box5">Box 5</div>
+<div class="box6">Box 6</div>
+
+<div class="bell">
+    🔔
+    <span class="badge">5</span>
+</div>
+
+<select>
+    <optgroup label="Sports">
+        <option>Cricket</option>
+        <option>Football</option>
+    </optgroup>
+
+    <optgroup label="Games">
+        <option>Chess</option>
+        <option>Carrom</option>
+    </optgroup>
+</select>
+
+<fieldset>
+    <input type="text">
+    <input type="email">
+</fieldset>
+
+<form>
+    <label>Email:</label>
+    <input type="email" placeholder="Enter your email" required />
+
+    <label>Password:</label>
+    <input type="password" placeholder="Enter password" required />
+
+    <button type="submit">Login</button>
+    <button type="reset">Clear</button>
+</form>
+
+<fieldset>
+    <legend>Personal Info</legend>
+    <input type="text">
+</fieldset>

@@ -78,6 +78,9 @@ function RenderPagination() {
     for (let i = 1; i <= totalPages; i++) {
         const btn = document.createElement("button");
         btn.textContent = i;
+        btn.style.borderTop = "none";
+        btn.style.borderBottom = "none";
+        btn.style.borderRadius = "0px";
 
         if (i === currentPage) {
             btn.classList.add("active");
